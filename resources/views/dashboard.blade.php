@@ -15,6 +15,9 @@
                     <p>
                         {{ Str::limit( $note->text, 200 ) }}
                     </p>
+                    <p>
+                    {{ $post->author }}
+                    </p>
                     <span>
                     {{ $post->updated_at->diffForHumans()  }}
                     </span>
