@@ -14,7 +14,7 @@ use App\Http\Controllers\ProfileController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::resource('/posts', PostController::class);
+Route::resource('/posts', PostController::class)->middleware(['auth']);
 
 Route::get('/', function () {
     return view('welcome');
