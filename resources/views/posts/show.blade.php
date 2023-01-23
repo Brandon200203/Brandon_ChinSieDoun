@@ -29,7 +29,7 @@
 		   {{ $post->author }}
 	       </p>
            <a href="{{ route('posts.edit', $post) }}" 
-class="btn-link ml-auto">Edit Note</a>
+class="btn-link ml-auto">Edit Post</a>
 
             </div>
         </div>
