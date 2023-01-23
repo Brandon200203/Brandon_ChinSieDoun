@@ -44,6 +44,16 @@ class PostController extends Controller
             'text' => 'required',
             'author' => 'required'
         ]);
+        $note = new Note([              //nieuw object aan maken van Note model
+            'user_id' => Auth::id(),    //id van de huidige user in user_id zetten
+            'title' => $request->title, //title (request) in title zetten
+            'text' => $request->text,
+            'author' => $request->author    //text (request) in text zetten
+        ]);
+        $note->save();                  //het object opslaan en dus de rij opslaan in de tabel
+        
+        return to_route('notes.index'); //redirect naar de route notes.index
+        
         
     }
 
