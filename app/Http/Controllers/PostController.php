@@ -44,7 +44,7 @@ class PostController extends Controller
             'text' => 'required',
             'author' => 'required'
         ]);
-        $note = new Note([              //nieuw object aan maken van Note model
+        $note = new Post([              //nieuw object aan maken van Note model
             'user_id' => Auth::id(),    //id van de huidige user in user_id zetten
             'title' => $request->title, //title (request) in title zetten
             'text' => $request->text,
