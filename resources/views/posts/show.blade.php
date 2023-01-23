@@ -28,8 +28,13 @@
            <p class="mt-6 whitespace-pre-wrap">
 		   {{ $post->author }}
 	       </p>
-           <a href="{{ route('posts.edit', $post) }}" 
-class="btn-link ml-auto">Edit Post</a>
+           <a href="{{ route('posts.edit', $post) }}" class="btn-link ml-auto">Edit Post</a>
+            
+    <form action="{{ route('posts.destroy', $post) }}" method="post">
+        @method('delete')
+        @csrf
+        <button type="submit" class="btn btn-danger ml-4" onclick="return confirm('Are you sure you wish to delete this note?')">Delete Post</button>
+    </form>
 
             </div>
         </div>
