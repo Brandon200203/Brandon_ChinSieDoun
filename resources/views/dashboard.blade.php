@@ -15,9 +15,9 @@
                     <p>
                         {{ $post->text }}
                     </p>
-<span>
-    {{ $post->updated_at }}
-</span>
+                    <span>
+                    {{ $post->updated_at->diffForHumans()  }}
+                    </span>
                 </div>
             @endforeach
 
