@@ -16,7 +16,7 @@
 
     <x-textarea name="text" rows="10" field="text" placeholder="Start typing here..." class="w-full mt-6"></x-textarea>
 
-    <x-input type="text" name="author" field="author" placeholder="author" class="w-full" autocomplete="off"></x-input>
+    <x-textarea name="text" rows="10" field="author" placeholder="author" class="w-full mt-6"></x-textarea>
 
     <x-button class="mt-6">Save Post</x-button>
 </form>
