@@ -13,7 +13,7 @@
                         {{ $post->title }}
                     </h2>
                     <p>
-                        {{ $post->text }}
+                        {{ Str::limit( $note->text, 200 ) }}
                     </p>
                     <span>
                     {{ $post->updated_at->diffForHumans()  }}
