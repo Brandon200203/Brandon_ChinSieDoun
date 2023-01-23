@@ -28,6 +28,9 @@
            <p class="mt-6 whitespace-pre-wrap">
 		   {{ $post->author }}
 	       </p>
+           <a href="{{ route('posts.edit', $post) }}" 
+class="btn-link ml-auto">Edit Note</a>
+
             </div>
         </div>
     </div>
