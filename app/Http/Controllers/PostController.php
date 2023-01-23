@@ -88,7 +88,20 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $request->validate([
+            'title' => 'required|max:120',
+            'text' => 'required',
+            'author' => 'required'
+        ]);
+    
+        $post->update([
+            'title' => $request->title,
+            'text' => $request->text,
+            'author' => $request->text
+        ]);
+    
+        return to_route('posts.show', $post);
+    
     }
 
     /**
